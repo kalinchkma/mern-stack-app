@@ -1,0 +1,12 @@
+/**
+ * message type
+*/
+const MessageType = {
+    MESSAGE_FETCH_START: "MESSAGE_FETCH_START",
+    MESSAGE_FETCH_SUCCESS: "MESSAGE_FETCH_SUCCESS",
+    MESSAGE_FETCH_ERROR: "MESSAGE_FETCH_ERROR",
+    MESSAGE_APPEND: "MESSAGE_APPEND"
+}
+
+
+export default MessageType;

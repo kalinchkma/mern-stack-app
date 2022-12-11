@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.app { 
+   
+    display: block;
+    max-width: 100%;
+    justify-content: center;
+    height: 100vh;
+    position: relative
+}

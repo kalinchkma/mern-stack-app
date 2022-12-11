@@ -1,0 +1,61 @@
+
+/* style custom for slick slider */
+
+.slick-slider {
+    width: 100%;
+}
+.slick-list {
+    height: 100%;
+    opacity: 1;
+}
+.slick-track {
+    height: 100%;
+}
+.slick-slide {
+    height: 100%;
+}
+.slick-next {
+    right: 0px;
+}
+.slick-prev {
+    left: 0px;
+    z-index: 9999;
+}
+
+@media only screen and (max-width: 600px) {
+    .slick-next {
+        right: 0px;
+    }
+    .slick-prev {
+        left: 0px;
+        z-index: 9999;
+    }
+}
+.slick-slide {
+    transform: scale(0.75);
+    transition: all linear 0.4s;
+    opacity: 0.4;
+}
+.slick-slide.slick-active.slick-cloned,
+.slick-slide.slick-active {
+    transform: scale(0.85);
+}
+
+.slick-slide.slick-active.slick-center.slick-current {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* dot style */
+.slick-dots li button:before {
+    color: #fff;
+}
+
+.slick-prev:before, .slick-next:before  {
+    color: #fff;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: #00ff44;
+}
