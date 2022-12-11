@@ -15,8 +15,7 @@ import { messageFetchSuccess } from "../../redux/message/message.action";
 
 import config from "../../config";
 
-// component imports
-import GameHeader from "../../components/game-header/game-header.component";
+
 
 import { 
     Box, 
@@ -233,7 +232,7 @@ const ProfilePage = ({ auth, messageFetchStartAsync,  setToken, setMessages, con
      * ..........................................................................
      */
     const setStatus = async (status) => {
-        console.log(status,"this status will be set");
+       
         try {
             const reqObject = {
                 token: auth.token,
@@ -248,16 +247,17 @@ const ProfilePage = ({ auth, messageFetchStartAsync,  setToken, setMessages, con
                 }
             });
             const result = await res.json();
-            console.log(result);
+            
             if(res.status === 200) {
                 setToken(result.success.user);
-                console.log("status set successfully")
+               
             } else {
-                console.log("error")
+              navigate("/404");
             }
 
         } catch(err) {
-            console.log(err);
+            navigate("/404");
+           
         }
     }
 
@@ -268,9 +268,6 @@ const ProfilePage = ({ auth, messageFetchStartAsync,  setToken, setMessages, con
             flexDirection: "column"
         }}>
             {/* page header */}
-            {/* <GameHeader title={"Profile"} pageLink="/" /> */}
-            {/* =================================== */}
-            {/* <div style={{height: "80px"}} ></div> */}
             {/* profile info */}
             <Grid container spacing={2} sx={{width: "100%"}}>
                 {/* profile avater info */}

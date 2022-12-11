@@ -212,7 +212,7 @@ const ProductCard = ({
      */
     // assigned user to product
     const assignedUser = async () => {
-        console.log(selectedSeller, " is going to add to ", product._id);
+       
         try {
             const reqObject = {
                 token: auth.token,
@@ -229,22 +229,22 @@ const ProductCard = ({
             });
             const result = await res.json();
             if(res.status === 200) {
-                console.log(result);
+              
                 fetchUsersStartAsync();
                 fetchCollectionStartAsync();
                 setSelectedSeller("");
             } else {
-                console.log(result);
+               
             }
             
         } catch(err) {
-            console.log(err);
+           
         }
 
     }
     // remove user
     const removeAssignedUser = async (userId, productId) => {
-        console.log(userId, " is going to removed from ", productId);
+      
         try {
             const reqObject = {
                 token: auth.token,
@@ -261,16 +261,16 @@ const ProductCard = ({
             });
             const result = await res.json();
             if(res.status === 200) {
-                console.log(result);
+               
                 fetchUsersStartAsync();
                 fetchCollectionStartAsync();
                 setSelectedSeller("");
             } else {
-                console.log(result);
+                
             }
             
         } catch(err) {
-            console.log(err);
+           
         }
     }
 

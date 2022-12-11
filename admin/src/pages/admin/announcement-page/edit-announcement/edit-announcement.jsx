@@ -89,7 +89,7 @@ const EditAnnouncementPage  = ({auth, announcement, announcementIsFetching, fetc
         linkList: requestedAnnouncement && Object.keys(requestedAnnouncement.list).length > 0 && requestedAnnouncement.list.link ? requestedAnnouncement.list.link : []
     });
 
-    console.log(state);
+  
     // set title and text
     const changeHandler = (e) => {
         setState({
@@ -173,7 +173,7 @@ const EditAnnouncementPage  = ({auth, announcement, announcementIsFetching, fetc
             const res = await updateAnnouncement(formData);
 
             if(res.status === 200) {
-                console.log(res);
+              
                 setImage("");
                 setState({
                     title: '',
@@ -192,7 +192,7 @@ const EditAnnouncementPage  = ({auth, announcement, announcementIsFetching, fetc
                 });
 
             } else {
-                console.log(res);
+               
 
                 setNotify({
                     ...notify,
@@ -202,7 +202,7 @@ const EditAnnouncementPage  = ({auth, announcement, announcementIsFetching, fetc
                 });
             }
        } catch(err) {
-            console.log(err);
+            
 
             setNotify({
                 ...notify,

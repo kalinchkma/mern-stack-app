@@ -163,7 +163,7 @@ class GameProducts extends React.Component {
      * handle order
      */
      handleOrder = (selectedProduct) => {
-        console.log("cart order handler call")
+       
         const { navigate, setCart } = this.props;
         if(this.state.playerId === "") {
             this.setState({

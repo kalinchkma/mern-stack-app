@@ -37,14 +37,14 @@ const  AnnouncementDataTable = ({rows, title, dataType, auth, fetchAnnouncementS
     const removeAnnouncementHandler = async (id, token) => {
         try {
             const res = await deleteAnnouncement(id, token);
-            console.log(res);
+          
             if(res.status === 200) {
                 fetchAnnouncementStartAsync();
             } else {
-                console.log("error");
+               
             }
         } catch(err) {
-            console.log(err);
+           
         }
     } 
 

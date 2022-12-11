@@ -4,20 +4,20 @@
 
 
 import {  Grid, List, } from "@mui/material";
-import { useParams, useSearchParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import AddAPhotoIcon from '@mui/icons-material/AddAPhoto';
 import SendIcon from '@mui/icons-material/Send';
 import {useRef, useEffect, useState } from "react";
 import { useSnackbar } from 'notistack';
 
- // imports components
- import GameHeader from "../../components/game-header/game-header.component";
- import OrderCard from "./order-card";
- import SenderMessageCard from "./message-card/sender-card";
- import ReciverMessageCard from "./message-card/reciver-card";
+// imports components
+import GameHeader from "../../components/game-header/game-header.component";
+import OrderCard from "./order-card";
+import SenderMessageCard from "./message-card/sender-card";
+import ReciverMessageCard from "./message-card/reciver-card";
 
- // impots styles
- import {
+// impots styles
+import {
     InputBox,
     MessageFileInputLabel,
     MessageFileInput,
@@ -102,10 +102,10 @@ const OrderMessagePage = ({
     // fetch order messages
     const fetchOrderMessage = async (id) => {
         try {
-            console.log("request will send here", id);
+           
             setMode(false);
             const res = await getMessageById(id);
-            console.log("message are ",res);
+          
             if(res.status === 200) {
                 setFirstMessage(res.success.messages);
             } else {
@@ -160,7 +160,7 @@ const OrderMessagePage = ({
                 id: id
             }
             const res = await setOrderStatus(reqObject);
-            console.log(res);
+           
             if(res.status === 200) {
                 enqueueSnackbar("Successfully updated order status", {variant: "success", preventDuplicate: true});
             } else {
@@ -174,7 +174,7 @@ const OrderMessagePage = ({
     bottomRef.current?.scrollIntoView({behavior: 'smooth'});
     // normal useeffect
     useEffect(() => {
-        console.log("normal useeffect call");
+       
         if(params.id) {
             getOrder(params.id);
         } else {
@@ -185,16 +185,15 @@ const OrderMessagePage = ({
  
     // listening to order socket
     useEffect(() => {
-        console.log("special use effect call");
      
         if(order) {
             socket.on(order._id, (msg) => {
                 if(msg === "updated") {
-                    console.log("updated order call");
+                   
                     getOrderStatus(order._id);
                 } else {
                     const newMsg = JSON.parse(msg);
-                    console.log("from send message",JSON.parse(msg));
+                    
                     if(!messages.includes(newMsg)) {
                         setMessages([...messages, newMsg]);
                     }
@@ -231,7 +230,7 @@ const OrderMessagePage = ({
 
             // send message 
             const res = await sendMessage(formData);
-            console.log(res);
+           
             if(res.status === 200) {
                 e.target.message.value = "";
                 e.target.file.value = "";
@@ -291,19 +290,11 @@ const OrderMessagePage = ({
                                 />
                         )
                         
-                       
                     }
                 })
             }
            
 
-          
-
-
-
-                
-            
-          
           {/*
             ........................................................................
              message sent box 

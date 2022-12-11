@@ -68,7 +68,7 @@ const ConfigPage  = ({auth, configs, fetchConfigStartAsync}) => {
         try {
             if(reqObject) {
                 const res = await addConfig(reqObject);
-                console.log(res);
+               
                 if(res.status === 200) {
                     setNotify({
                         ...notify,
@@ -122,7 +122,7 @@ const ConfigPage  = ({auth, configs, fetchConfigStartAsync}) => {
         try {
             if(reqObject) {
                 const res = await addConfig(reqObject);
-                console.log(res);
+               
                 if(res.status === 200) {
                     setNotify({
                         ...notify,
@@ -176,7 +176,7 @@ const ConfigPage  = ({auth, configs, fetchConfigStartAsync}) => {
         try {
             if(reqObject) {
                 const res = await addConfig(reqObject);
-                console.log(res);
+               
                 if(res.status === 200) {
                     setNotify({
                         ...notify,
@@ -230,7 +230,7 @@ const ConfigPage  = ({auth, configs, fetchConfigStartAsync}) => {
         try {
             if(reqObject) {
                 const res = await addConfig(reqObject);
-                console.log(res);
+               
                 if(res.status === 200) {
                     setNotify({
                         ...notify,
@@ -284,7 +284,7 @@ const ConfigPage  = ({auth, configs, fetchConfigStartAsync}) => {
         try {
             if(reqObject) {
                 const res = await addConfig(reqObject);
-                console.log(res);
+               
                 if(res.status === 200) {
                     setNotify({
                         ...notify,
@@ -338,7 +338,7 @@ const ConfigPage  = ({auth, configs, fetchConfigStartAsync}) => {
         try {
             if(reqObject) {
                 const res = await deleteSocialLink(reqObject);
-                console.log(res);
+              
                 if(res.status === 200) {
                     setNotify({
                         ...notify,
@@ -391,7 +391,7 @@ const ConfigPage  = ({auth, configs, fetchConfigStartAsync}) => {
         try {
             if(e.target.file.files.length > 0) {
                 const res = await uploadImage(reqObject);
-                console.log(res);
+              
                 if(res.status === 200) {
                     setNotify({
                         ...notify,
@@ -448,7 +448,7 @@ const ConfigPage  = ({auth, configs, fetchConfigStartAsync}) => {
             
             if(reqObject) {
                 const res = await deleteBannerImage(reqObject);
-                console.log(res);
+               
                 if(res.status === 200) {
                     setNotify({
                         ...notify,

@@ -42,7 +42,7 @@ export const deleteAnnouncement = async (id, token) => {
         id: id,
         token: token
     }
-    console.log("request object ", reqObject);
+ 
     try {
         const res = await fetch(`${config.API_DOMAIN}/announcement`, {
             method: "DELETE",

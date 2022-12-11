@@ -56,7 +56,7 @@ const OrderPage = ({
         fetchSellerStartAsync();
     }, []);
 
-    console.log(cart);
+  
 
     // select seller
     const [selectedSeller, setSelectedSeller] = useState({
@@ -107,7 +107,7 @@ const OrderPage = ({
            */
           try {
             const res = await sendOrder(orderOnject);
-            console.log(res);
+          
             if(res.status === 200) {
                 orderFetchStartByIdAsync(auth.uid);
                 navigate(`/order/messages/${res.success.id}`);
@@ -119,7 +119,7 @@ const OrderPage = ({
             }
 
           } catch(err) {
-            console.log(err);
+           
           }
            
         }

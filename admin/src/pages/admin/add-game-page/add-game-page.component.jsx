@@ -107,7 +107,7 @@ import { adminAddGame } from "../../../controllers/gameController";
      * ==============================================
      */
     const handleDeleteDescription = (e) => {
-        console.log("this description will delete ", e.target.id);
+        
         const ob = state.descriptionMap;
         ob.splice(Number(e.target.id), 1);
         setState({
@@ -177,7 +177,7 @@ import { adminAddGame } from "../../../controllers/gameController";
         try {
             const result = await adminAddGame(formData);
             if(result.status === 200) {
-                console.log(result);
+               
                 setNotify({
                     ...notify,
                     open: true,
@@ -194,7 +194,7 @@ import { adminAddGame } from "../../../controllers/gameController";
                 setImage(null);
                 e.target.file.value = "";
             } else {
-                console.log(result);
+              
 
                 setAddproductErrors({...result});
                 setNotify({
@@ -205,7 +205,7 @@ import { adminAddGame } from "../../../controllers/gameController";
                 });
             }
         } catch(err) {
-            console.log(err);
+            
 
             setNotify({
                 ...notify,

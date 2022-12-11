@@ -23,7 +23,6 @@ export default function swDev() {
 
     let swUrl = `${process.env.PUBLIC_URL}/sw.js`;
     navigator.serviceWorker.register(swUrl).then((res) => {
-        console.warn("response", res);
         return res.pushManager.getSubscription()
         .then((subscription) => {
             return res.pushManager.subscribe({

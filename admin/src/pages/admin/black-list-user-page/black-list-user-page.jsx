@@ -42,7 +42,7 @@ class BlackListUserPage extends React.Component {
        
         const blockedUser = findBlockedUser(users);
 
-        console.log("blocked user is ", blockedUser);
+    
 
         const previousLink = [["Dashboard", "/admin/"]]
 

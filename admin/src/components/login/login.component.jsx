@@ -78,8 +78,7 @@ const LoginComponent = ({setToken }) => {
             const res = await result.json();
           
             if(result.status === 200) {
-                console.log("from if");
-                console.log(res);
+               
                 setState({
                     ...state,
                     loginErrorMessage: "",
@@ -89,11 +88,10 @@ const LoginComponent = ({setToken }) => {
                 setToken(res.success.auth_user);
                 navigate('/admin/');
             } else {
-                console.log("from else", res)
-
+               
                 setState({
                     ...state,
-                    loginErrorMessage: res.errors.msg,
+                    loginErrorMessage: "!Error invalid user",
                     loginError: true
                 });
                return;
@@ -101,7 +99,7 @@ const LoginComponent = ({setToken }) => {
             
            
         } catch(err) {
-            console.log("from catch", err);
+            
             setState({
                 ...state,
                 loginError: true,

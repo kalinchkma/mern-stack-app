@@ -40,7 +40,7 @@ const ProductCard = ({product, selectProduct,removeSelectedProduct, ...props}) =
 
     // set activate
     const selectHandler = () => {
-        console.log("select handler clicked");
+      
         if(product.status !== "close") {
             setSelect(!select);
             selectProduct(product._id, product);

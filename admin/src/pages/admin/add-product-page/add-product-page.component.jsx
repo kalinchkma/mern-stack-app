@@ -154,7 +154,7 @@ const AddProductPage = ({games, auth, fetchGamesStartAsync}) => {
                         category: result.category ? result.category.msg : undefined,
                         price: result.price ? result.price.msg : undefined 
                     })
-                    console.log(result);
+                   
                 }
 
             } catch(err) {

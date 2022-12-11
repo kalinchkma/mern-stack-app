@@ -1,5 +1,5 @@
  const config = {
-    API_DOMAIN: "http://179.61.188.250/api"
+    API_DOMAIN: "https://api.gontop.app"
 }
 
 export default config;

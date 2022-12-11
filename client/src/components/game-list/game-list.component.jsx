@@ -16,7 +16,7 @@ import { createStructuredSelector } from "reselect";
 import { Box } from "@mui/system";
 
 const GameList = ({games}) => {
-    console.log("All game from game list", games);
+    
     return (
         <GameListContainer>
             <GameListTitle>available games</GameListTitle>

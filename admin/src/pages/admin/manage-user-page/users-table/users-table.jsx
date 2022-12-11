@@ -28,16 +28,16 @@ const  UsersDataTable = ({rows, title, dataType, fetchUsersStartAsync, auth}) =>
 
     // change user type
     const changeUserTypeHandler = async (type, id) => {
-        console.log(id, "User will be ", type);
+       
         try {
             const respose = await adminUserTypeChange(type, id, auth.token);
             if(respose.status === 200) {
                 fetchUsersStartAsync();
             } else {
-                console.log(respose);
+               
             }
         } catch(err) {
-            console.log(err);
+           
         }
     }
 
@@ -48,11 +48,11 @@ const  UsersDataTable = ({rows, title, dataType, fetchUsersStartAsync, auth}) =>
             if(respose.status === 200) {
                 fetchUsersStartAsync();
             } else {
-                console.log(respose);
+               
             }
-            console.log("delete status is ",respose.status);
+           
         } catch(err) {
-            console.log(err);
+           
         }
     } 
 

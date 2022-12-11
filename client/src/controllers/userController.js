@@ -15,7 +15,7 @@ export const signup = async (userInfo) => {
         password: userInfo.password,
         phone: `+88${userInfo.phone}`
     }
-    console.log(userObject);
+  
     try {
         const res = await fetch(`${config.API_DOMAIN}/user/signup`, {
             method: "POST",

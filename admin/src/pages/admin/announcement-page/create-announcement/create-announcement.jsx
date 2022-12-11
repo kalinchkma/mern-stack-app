@@ -129,7 +129,7 @@ const CreateAnnouncementPage  = ({auth}) => {
             const res = await createAnnouncement(formData);
 
             if(res.status === 200) {
-                console.log(res);
+              
                 setImage("");
                 setState({
                     title: '',
@@ -148,7 +148,7 @@ const CreateAnnouncementPage  = ({auth}) => {
                 });
 
             } else {
-                console.log(res);
+               
 
                 setNotify({
                     ...notify,
@@ -158,7 +158,7 @@ const CreateAnnouncementPage  = ({auth}) => {
                 });
             }
        } catch(err) {
-            console.log(err);
+           
 
             setNotify({
                 ...notify,

@@ -40,14 +40,14 @@ class HomePage extends React.Component {
         }
         // verifyLogin
         const res = await verifyLogin(reqObject);
-        console.log(res);
+        
         if(res.status === 200) {
           setToken(res.success.auth_user);
         } else {
           setToken(null);
         }
       } catch(err) {
-        console.log(err);
+       
       }
       
     }

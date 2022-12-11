@@ -109,7 +109,7 @@ import { adminUpdateGameById } from "../../../controllers/gameController";
      * ==============================================
      */
     const handleDeleteDescription = (e) => {
-        console.log("this description will delete ", e.target.id);
+      
         const ob = state.descriptionMap;
         ob.splice(Number(e.target.id), 1);
         setState({
