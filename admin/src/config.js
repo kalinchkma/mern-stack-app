@@ -1,5 +1,5 @@
  const config = {
-    API_DOMAIN: "http://192.168.0.111:4000"
+    API_DOMAIN: "http://179.61.188.250/api"
 }
 
 export default config;
