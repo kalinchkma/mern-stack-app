@@ -74,13 +74,17 @@ class GameProducts extends React.Component {
     }
 
     componentDidMount() {
-        const { fetchCollectionStartAsync, setCart, topRef } = this.props;
-        fetchCollectionStartAsync();
-        setCart(null);
-        this.setState({
-            ...this.state,
-            topRef: topRef
-        })
+        const { fetchCollectionStartAsync, setCart, topRef, params, navigate } = this.props;
+        if(params.id) {
+            fetchCollectionStartAsync();
+            setCart(null);
+            this.setState({
+                ...this.state,
+                topRef: topRef
+            })
+        } else {
+            navigate("/404");
+        }
     }
 
 
@@ -223,7 +227,7 @@ class GameProducts extends React.Component {
             this.state.topRef.current?.scrollIntoView();
         }
 
-        return Object.keys(game).length && (
+        return Object.keys(game).length &&  (
             <>
                 {/* place holder for ref */}
                 <div ref={this.state.topRef} style={{height: "0px"}}></div>

@@ -70,9 +70,6 @@ const App = ({auth, orderFetchStartByIdAsync, notification, setNotification}) =>
           }
         })
       }
-      return () => {
-        socket.disconnect();
-      }
   }, [socket]);
 
   return (

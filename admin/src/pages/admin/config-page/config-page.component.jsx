@@ -770,7 +770,7 @@ const ConfigPage  = ({auth, configs, fetchConfigStartAsync}) => {
                             {/* display */}
                             <styles.ConfigDisplay>
                             {
-                                configs && configs.length > 0 &&
+                                configs && configs.length > 0 && 
                                     configs.map(config => {
                                         if(config.name === "images") {
                                             return (

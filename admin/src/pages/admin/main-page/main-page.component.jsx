@@ -46,7 +46,12 @@ import AnnouncementPage from '../announcement-page/announcement-page.component';
 import CreateAnnouncementPage from '../announcement-page/create-announcement/create-announcement';
 import EditAnnouncementPage from "../announcement-page/edit-announcement/edit-announcement";
 import ConfigPage from '../config-page/config-page.component';
-import ManageSelles from '../manage-selles/manage-selles-page';
+
+// reduc
+import { connect } from "react-redux";
+import { createStructuredSelector } from 'reselect';
+import { selectAuthToken } from "../../../redux/auth/auth.selector";
+import { useNavigate } from 'react-router-dom';
 
 // import logout hook
 import Logout from '../logout.hook';
@@ -69,18 +74,18 @@ const action_menu = [
   ["Announcement", CampaignIcon, "announcement"],
   ["Black List", PlaylistRemoveIcon, "black-list"],
   ["Config", SettingsInputComponentIcon, "config"],
-  // ["Manage Selles", ProductionQuantityLimitsIcon, "manage-selles"],
   ["Logout", ExitToAppIcon, "logout"]
 ]
 
 
 
 // main dash board drawer component
-const MainAdminPage = () => {
+const MainAdminPage = ({auth}) => {
   // set document type
 
   const theme = useTheme();
   const [open, setOpen] = React.useState(true);
+  const navigate = useNavigate();
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -89,6 +94,14 @@ const MainAdminPage = () => {
   const handleDrawerClose = () => {
     setOpen(false);
   };
+
+  React.useState(() => {
+    if(!auth) {
+      navigate("/errors");
+    }
+  }, []);
+
+
 
   return (
 
@@ -149,7 +162,6 @@ const MainAdminPage = () => {
               <Route path="/manage-user" element={<ManageUserPage />} />
               <Route path='/add-game' element={<AddGamePage />} />
               <Route path='/manage-game' element={<ManageGame />} />
-              {/* <Route path='/manage-selles' element={<ManageSelles />} /> */}
               <Route path='/manage-game/:id' element={<EditGamePageEntry />} />
               <Route path='/add-product' element={<AddProductPage />} />
               <Route path='/manage-product' element={<ManageProduct />} />
@@ -168,4 +180,9 @@ const MainAdminPage = () => {
 }
 
 
-export default MainAdminPage;
+const mapStateToProps = createStructuredSelector({
+    auth: selectAuthToken
+});
+
+
+export default  connect(mapStateToProps)(MainAdminPage);

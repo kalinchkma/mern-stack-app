@@ -30,12 +30,6 @@ import { orderFetchStartByIdAsync } from "../../redux/order/order.action";
 // imports utils
 import findById from "../../utils/findById";
 import { sendOrder } from "../../controllers/orderController";
-import config from "../../config";
-
-
-// import socket
-import {io} from "socket.io-client";
-
 
 
 
@@ -43,8 +37,7 @@ import {io} from "socket.io-client";
 const OrderPage = ({
     auth, fetchSellerStartAsync, sellers, cart, orderFetchStartByIdAsync
 }) => {
-    // socket 
-    const socket = io(`${config.API_DOMAIN}`);
+
 
     const navigate = useNavigate();
 
@@ -53,7 +46,11 @@ const OrderPage = ({
     
     // sync sellers
     useEffect(() => {
-        fetchSellerStartAsync();
+        if(cart) {
+            fetchSellerStartAsync();
+        } else {
+            navigate("/404");
+        }
     }, []);
 
   

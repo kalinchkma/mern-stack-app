@@ -201,9 +201,7 @@ const OrderMessagePage = ({
                 }
             });
         }
-        return () => {
-            socket.disconnect();
-        }
+       
     }, [socket]);
    
 

@@ -40,7 +40,7 @@ export const AppToolbar = styled(Toolbar)({
     background: "#f7f7f7",
     boxShadow: "inset 0px 0px 2px 0px #000",
     display: "flex",
-    justifyContent: "space-between",
+    // justifyContent: "space-between",
 });
 
 
@@ -57,7 +57,8 @@ export const AppBarIcon = styled(IconButton)({
         marginTop: "5px"
     },
     "&:hover": {
-        color: "#777"
+        color: "#777",
+        background: "transparent"
     }
 });
 

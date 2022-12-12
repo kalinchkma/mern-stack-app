@@ -1,0 +1,19 @@
+// db.users.insert({
+//    "name": "admin",
+//    "username": "gontop-admin",
+//    "email": "admin@gontop.com",
+//    "phone": "01763499999",
+//    "password": "$2b$10$ubL.nDWWk3oJL73g/WAPduzRt23C0P9X8Nu8bsJ7KHD4LiLWfcuie",
+//    "userType": "super",
+//    "transactionNumbers": {
+//      "nogod": "01845672389",
+//      "bkash": "01860375990"
+//    },
+//    "totalBuy": 0,
+//    "totalSells": 0,
+//    "assignedProducts": [
+//      "638f7e88519fb1419589cc94"
+//    ],
+//    "status": "active"
+//  })
+    

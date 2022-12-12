@@ -51,7 +51,7 @@ const Dashboard = ({ games,
                     user counter 
                 ......................................................
                 */}
-                <Grid item md={4} xs={12} sx={6}>
+                <Grid item md={4} xs={12} >
                     <styles.CounterBox  sx={{background: "#75bcfb"}}>
                         {/* header */}
                         <Typography sx={{
@@ -103,7 +103,7 @@ const Dashboard = ({ games,
                     game counter 
                 ......................................................
                 */}
-                <Grid item md={4} xs={12} sx={6}>
+                <Grid item md={4} xs={12} >
                     <styles.CounterBox  sx={{background: "#6459b5"}}>
                         {/* header */}
                         <Typography sx={{
@@ -155,7 +155,7 @@ const Dashboard = ({ games,
                     product counter 
                 ......................................................
                 */}
-                <Grid item md={4} xs={12} sx={6}>
+                <Grid item md={4} xs={12} >
                     <styles.CounterBox  sx={{background: "#a5a5a5"}}>
                         {/* header */}
                         <Typography sx={{

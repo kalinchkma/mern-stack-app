@@ -23,7 +23,7 @@ import configReducer from "./config/config.reducer";
 const rootPersistConfig = {
     key: 'root',
     storage: storage,
-    whitelist: ['auth'],
+    whitelist: ['auth', 'games', 'auth', 'users', 'announcement', 'config'],
 }
 
 

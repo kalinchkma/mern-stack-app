@@ -53,52 +53,6 @@ const HomePageBanner = ({auth, configs}) => {
                 
                    
                         
-                        {/* <div className="box" style={{
-                        width: "100% !important",
-                        height: "100% !important"
-                        }}>
-                            <img style={{
-                                width: "100% !important",
-                                height: "100% !important",
-                                objectFit: "cover"
-                            }} src="/images/pubg.jpg" alt=""/>
-
-                        </div>
-
-                        <div className="box"
-                         style={{
-                            width: "100% !important",
-                            height: "100% !important"
-                         }}
-                        >
-                                <img
-                                style={{
-                                    width: "100% !important",
-                                    height: "100% !important",
-                                    objectFit: "cover"
-                                
-                                }}
-                                src="/images/free-fire.jpg" alt=""/>
-                        </div>
-
-                        <div className="box"
-                        style={{
-                            width: "100% !important",
-                            height: "100% !important"
-                        }}
-                        >
-                            <img
-                                style={{
-                                    width: "100% !important",
-                                    height: "100% !important",
-                                    objectFit: "cover"
-                                }}
-                            src="/images/ml.jpg" alt=""/>
-                        </div> */}
-                   
-                
-
-               
 
             </SliderSystem>
         </BannerContainer>

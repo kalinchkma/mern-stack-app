@@ -76,7 +76,7 @@ const LoginComponent = ({setToken }) => {
                 body: JSON.stringify(userObject)
             });
             const res = await result.json();
-          
+            console.log(res);
             if(result.status === 200) {
                
                 setState({
