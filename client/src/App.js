@@ -61,13 +61,12 @@ const App = ({auth, orderFetchStartByIdAsync, notification, setNotification}) =>
           if(msg === "order") {
             orderFetchStartByIdAsync(auth.uid);
             if(auth.userType === "seller" || auth.userType === "admin") {
-              // enqueueSnackbar("You have new order ", {variant: "info"});
               showNotification("You have new order");
             }
             setNotification({
               order: true
             });
-          } else {
+          } else if(typeof msg === "string") {
             showMsgNotification("you have new message", msg);
           }
         })

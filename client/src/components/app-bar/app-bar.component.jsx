@@ -57,7 +57,7 @@ const MainAppBar = ({auth, notification}) => {
                         notification &&
                         notification.order ?
                         <Badge color="warning" variant="dot" >
-                          <AppBarIcon LinkComponent={Link} to="/history?cat=pending" color="inherit" aria-label="open drawer">
+                          <AppBarIcon LinkComponent={Link} to="/history" color="inherit" aria-label="open drawer">
                               <ShoppingCartIcon sx={{fontSize: "30px"}} />
                               {
                                 (auth !== null && (auth.userType === "admin" || auth.userType === "seller")) ?
@@ -66,7 +66,7 @@ const MainAppBar = ({auth, notification}) => {
                               }
                           </AppBarIcon>
                         </Badge> :
-                        <AppBarIcon LinkComponent={Link} to="/history?cat=pending" color="inherit" aria-label="open drawer">
+                        <AppBarIcon LinkComponent={Link} to="/history" color="inherit" aria-label="open drawer">
                               <ShoppingCartIcon sx={{fontSize: "30px"}} />
                               {
                                 (auth !== null && (auth.userType === "admin" || auth.userType === "seller")) ?
