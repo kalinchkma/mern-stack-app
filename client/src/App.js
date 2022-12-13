@@ -33,7 +33,7 @@ import {io} from "socket.io-client";
 import { useSnackbar } from 'notistack';
 
 // get notification function
-import { getPermission, showNotification } from "./hook/notify";
+import { showMsgNotification, showNotification } from "./hook/notify";
 
 
 
@@ -61,12 +61,14 @@ const App = ({auth, orderFetchStartByIdAsync, notification, setNotification}) =>
           if(msg === "order") {
             orderFetchStartByIdAsync(auth.uid);
             if(auth.userType === "seller" || auth.userType === "admin") {
-              enqueueSnackbar("You have new order ", {variant: "info"});
+              // enqueueSnackbar("You have new order ", {variant: "info"});
               showNotification("You have new order");
             }
             setNotification({
               order: true
             });
+          } else {
+            showMsgNotification("you have new message", msg);
           }
         })
       }
